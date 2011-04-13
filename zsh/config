@@ -1,0 +1,45 @@
+
+#
+# colors
+export LSCOLORS=gxcxxxxxfxaxaxfxfxGxGx
+autoload colors; colors;
+
+
+#
+# prompt
+
+
+PROMPT="
+[%{$fg[cyan]%}%n%{$reset_color%}@%{$fg[magenta]%}local%{$reset_color%}] %~ 
+%# "
+
+
+
+# completion
+autoload -U compinit
+compinit
+ 
+# automatically enter directories without cd
+setopt auto_cd
+
+# ignore duplicate history entries
+setopt histignoredups
+ 
+# keep more history
+export HISTSIZE=200
+
+
+
+#
+# emacs key bindings
+bindkey -e
+
+
+#
+# RVM
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+
+#
+# PATH
+export PATH=/usr/local/bin:$PATH

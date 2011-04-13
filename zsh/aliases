@@ -1,0 +1,31 @@
+
+
+#
+# git
+alias gs='git status'
+alias gcam='git commit -a -m'
+alias gcm='git commit -m'
+alias gp='git push'
+alias ga='git add'
+alias grm='git rm'
+
+alias cdp='cap deploy'
+alias gpd='git push;cap deploy'
+
+#
+# nav
+
+alias ls='ls -apG'
+alias lsl='ls -ahlpG'
+alias ll='lsl'
+alias cl='clear'
+alias cd..='cd ..'
+alias .='lsl'
+alias ..='cd ..'
+alias l='lsl'
+alias ..l='cd ..;lsl'
+
+
+#
+# servers
+alias restart='touch tmp/restart.txt'

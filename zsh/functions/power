@@ -1,0 +1,15 @@
+
+
+# 
+# Pow-ize the current directory, with config files
+
+
+[[ -a config.ru ]] || return
+
+cd ~/.pow
+ln -s $OLDPWD
+cd $OLDPWD
+
+echo "rvm --create use default@`basename $PWD`" > .rvmrc
+echo "\n.powrc" >> .gitignore
+touch .powrc
