@@ -11,5 +11,5 @@ ln -s $OLDPWD
 cd $OLDPWD
 
 echo "rvm --create use default@`basename $PWD`" > .rvmrc
-echo "\n.powrc" >> .gitignore
+echo "\n.powrc\n.rvmrc\n" >> .gitignore
 touch .powrc

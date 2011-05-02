@@ -11,6 +11,7 @@ alias grm='git rm'
 
 alias cdp='cap deploy'
 alias gpd='git push;cap deploy'
+alias gdm='git diff | mate'
 
 #
 # nav
