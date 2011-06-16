@@ -10,6 +10,6 @@ cd ~/.pow
 ln -s $OLDPWD
 cd $OLDPWD
 
-echo "rvm --create use default@`basename $PWD`" > .rvmrc
+echo "rvm use default@`basename $PWD`" > .rvmrc
 echo "\n.powrc\n.rvmrc\n" >> .gitignore
 touch .powrc

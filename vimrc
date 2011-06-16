@@ -1,8 +1,10 @@
 
 set nocompatible
 
+filetype on
 filetype plugin on
 filetype indent on
+
 syntax on
 
 set autoread
@@ -11,6 +13,7 @@ set nobackup
 set nowritebackup
 set nowrap
 
+set showmode
 set ruler
 set number
 set ch=2
@@ -23,7 +26,7 @@ set ignorecase
 
 set autoindent
 set smartindent
-
+set virtualedit=all
 
 " from vimcasts/e/20 for VIM in IRB
 if has("autocmd")

@@ -1,5 +1,6 @@
 
 
+
 #
 # git
 alias gs='git status'
@@ -7,6 +8,7 @@ alias gcam='git commit -a -m'
 alias gcm='git commit -m'
 alias gp='git push'
 alias ga='git add'
+alias ga.='git add .'
 alias grm='git rm'
 
 alias cdp='cap deploy'

@@ -5,16 +5,6 @@ export LSCOLORS=gxcxxxxxfxaxaxfxfxGxGx
 autoload colors; colors;
 
 
-#
-# prompt
-
-
-PROMPT="
-[%{$fg[cyan]%}%n%{$reset_color%}@%{$fg[magenta]%}local%{$reset_color%}] %~ 
-%# "
-
-
-
 # completion
 autoload -U compinit
 compinit
@@ -28,6 +18,8 @@ setopt histignoredups
 # keep more history
 export HISTSIZE=200
 
+export COMP_NAME="local"
+setopt prompt_subst
 
 
 #

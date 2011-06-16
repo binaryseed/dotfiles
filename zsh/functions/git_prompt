@@ -1,0 +1,16 @@
+if (git rev-parse --git-dir 1>/dev/null 2>/dev/null ); then
+	
+	echo -n ":"
+	if (git status | grep 'Changes not staged' 1>/dev/null 2> /dev/null); then
+		echo -n "%{$fg[green]%}"
+	fi
+	if (git status | grep 'Changes to be committed' 1>/dev/null 2> /dev/null); then
+		echo -n "%{$fg[yellow]%}"
+	fi
+	if (git status | grep 'Your branch is ahead' 1>/dev/null 2> /dev/null); then
+		echo -n "%{$fg[red]%}"
+	fi
+	echo -n "$(git branch 2> /dev/null | grep '^\*' | sed 's/^\*\ //')"
+	echo -n "%{$reset_color%}"
+	
+fi
