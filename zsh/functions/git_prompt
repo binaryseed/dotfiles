@@ -4,6 +4,9 @@ if (git rev-parse --git-dir 1>/dev/null 2>/dev/null ); then
 	if (git status | grep 'Changes not staged' 1>/dev/null 2> /dev/null); then
 		echo -n "%{$fg[green]%}"
 	fi
+	if (git status | grep 'Untracked files' 1>/dev/null 2> /dev/null); then
+		echo -n "%{$fg[green]%}"
+	fi
 	if (git status | grep 'Changes to be committed' 1>/dev/null 2> /dev/null); then
 		echo -n "%{$fg[yellow]%}"
 	fi
