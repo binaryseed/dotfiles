@@ -1,2 +1,9 @@
 startup_message off
-escape ^Bb
+autodetach on
+defutf8 on
+shell zsh
+escape ^Zz
+
+hardstatus alwayslastline "%= %t:%H %n   "
+
+# ^z r -- nowrap

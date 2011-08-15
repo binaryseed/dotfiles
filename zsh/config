@@ -11,6 +11,7 @@ compinit
  
 # automatically enter directories without cd
 setopt auto_cd
+setopt mark_dirs
 
 # ignore duplicate history entries
 setopt histignoredups
