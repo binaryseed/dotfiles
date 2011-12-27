@@ -12,3 +12,13 @@ autoload -U ~/.zsh/functions/*(:t)
 PROMPT='
 [%{$fg[cyan]%}%n%{$reset_color%}@%{$fg[magenta]%}$COMP_NAME%{$reset_color%}] %~$(git_prompt)
 %# '
+
+function zle-line-init zle-keymap-select {
+    RPS1="${${KEYMAP/vicmd/-N}/(main|viins)/}"
+    RPS2=$RPS1
+    zle reset-prompt
+}
+zle -N zle-line-init
+zle -N zle-keymap-select
+
+
