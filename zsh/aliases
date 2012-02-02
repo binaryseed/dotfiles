@@ -14,6 +14,7 @@ alias grm='git rm'
 alias cdp='cap deploy'
 alias gpd='git push;cap deploy'
 alias gdm='git diff | mate'
+alias gd='git diff'
 
 #
 # nav
@@ -32,3 +33,12 @@ alias ..l='cd ..;lsl'
 #
 # servers
 alias restart='touch tmp/restart.txt'
+
+
+#
+# shortcuts
+
+alias rbv='rbenv'
+
+alias tarc='tar -czpvf'
+alias tarx='tar -xzpvf'

@@ -42,5 +42,4 @@ endif
 inoremap <c-f> <Right>
 inoremap <c-b> <Left>
 inoremap jk <Esc>
-inoremap ;; <Esc>
 
