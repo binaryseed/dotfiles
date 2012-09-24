@@ -3,7 +3,7 @@ Dotfiles
 
 Setup symlinks by running
 
-	rake install
+	rake link
 
 Add local zsh configuration to 
 

@@ -10,3 +10,7 @@
 
 ((ViMap normalMap) map:"<cr>" to:"mzo<Esc>`z")
 ((ViMap normalMap) map:"<s-cr>" to:"mzO<Esc>`z")
+
+((ViMap normalMap) map:"H" to:"^")
+((ViMap normalMap) map:"L" to:"$")
+

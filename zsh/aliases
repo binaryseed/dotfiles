@@ -10,6 +10,7 @@ alias gp='git push'
 alias ga='git add'
 alias ga.='git add .'
 alias grm='git rm'
+alias gl='git log --oneline --graph'
 
 alias cdp='cap deploy'
 alias gpd='git push;cap deploy'
@@ -21,14 +22,13 @@ alias gd='git diff'
 
 alias ls='ls -apG'
 alias lsl='ls -ahlpG'
-alias ll='lsl'
 alias cl='clear'
 alias cd..='cd ..'
 alias .='lsl'
 alias ..='cd ..'
 alias l='lsl'
 alias ..l='cd ..;lsl'
-
+alias ll='ls -ahlpG *'
 
 #
 # servers
