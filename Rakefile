@@ -2,19 +2,11 @@ require 'rake'
 
 task :link do
 
-	Dir['*.config'].each do |file|
-		
-		link = file.match(/(.*)\.config/)[1]
-
-		if File.exists?( File.join(ENV['HOME'], ".#{link}") )
-			
-			puts "~/.#{link} exists"
-		else
-			
-			puts "linking ~/.#{link}"
-			system "ln -s dotfiles/#{file} $HOME/.#{link}"
-		end
-		
+	puts "Linking config files"
+	Dir['config/*'].each do |file|
+		system "ln -sfv .dotfiles/#{file} ~/.#{file.match(/config\/(.*)/)[1]}"
 	end
 
+	system 'ln -sfv .dotfiles/vim ~/.vim'
+	system 'ln -sfv .dotfiles/zsh ~/.zsh'
 end

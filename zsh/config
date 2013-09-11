@@ -4,32 +4,25 @@
 export LSCOLORS=gxcxxxxxfxaxaxfxfxGxGx
 autoload colors; colors;
 
-
 # completion
 autoload -U compinit
 compinit
- 
+
 # automatically enter directories without cd
 setopt auto_cd
 setopt mark_dirs
 
 # ignore duplicate history entries
 setopt histignoredups
- 
+
 # keep more history
 export HISTSIZE=200
 
 export COMP_NAME="local"
 setopt prompt_subst
 
-
 #
 # emacs key bindings
 bindkey -e
 
-
-#
-# PATH
-export PATH=/usr/local/bin:$PATH
-
-export EDITOR=vico
+export EDITOR=sub

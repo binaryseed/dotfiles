@@ -1,0 +1,79 @@
+
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+Bundle 'gmarik/vundle'
+
+Bundle 'tpope/vim-surround'
+Bundle 'kien/ctrlp.vim'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'scrooloose/nerdtree'
+Bundle 'Lokaltog/vim-easymotion'
+
+syntax on
+filetype plugin indent on
+
+set background=dark
+colorscheme solarized
+
+set autoread
+set noswapfile
+set nobackup
+set nowritebackup
+set nowrap
+
+set showmode
+set ruler
+set number
+set ch=2
+set showcmd
+set incsearch
+
+set showmatch
+set visualbell
+set ignorecase
+
+set list
+set listchars=tab:▸\ ,eol:¬,trail:·
+
+set autoindent
+set smartindent
+set virtualedit=all
+
+if (&term == "iterm")
+	set mouse=a
+	map <ScrollWheelUp> <C-Y>
+	map <ScrollWheelDown> <C-E>
+end
+
+" Restore cursor position
+autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+
+"""" Mappings
+" insert mode movements
+inoremap <c-f> <Right>
+inoremap <c-b> <Left>
+
+" exit insert mode
+inoremap <c-l> <Esc>l
+
+" newlines with enter key
+nmap <CR> m`o<Esc>``
+nmap ✠ m`O<Esc>``   " relies on iTerm mapping of shift-enter to ✠
+
+" leader
+let mapleader = ","
+
+"""" NERDTree
+" auto open NERDTree
+autocmd vimenter * NERDTree
+autocmd vimenter * if !argc() | NERDTree | endif
+
+" close if NERDTree is last window
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+"""" CtrlP
+let g:ctrlp_map = '<c-p>'
+

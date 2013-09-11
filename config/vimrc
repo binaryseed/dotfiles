@@ -1,0 +1,70 @@
+
+call pathogen#infect()
+
+set nocompatible
+
+filetype on
+filetype plugin on
+filetype indent on
+
+syntax on
+set background=dark
+colorscheme neopro
+
+set autoread
+set noswapfile
+set nobackup
+set nowritebackup
+set nowrap
+
+set showmode
+set ruler
+set number
+set ch=2
+set showcmd
+set incsearch
+
+set showmatch
+set visualbell
+set ignorecase
+
+" show invisibles
+set list
+set listchars=tab:▸\ ,eol:¬
+
+set tabstop=4
+
+set autoindent
+set smartindent
+set virtualedit=all
+
+if has("gui_macvim")
+
+	" show invisibles
+	set list
+	set listchars=tab:▸\ ,eol:¬
+
+endif
+
+if (&term == "iterm")
+	colorscheme solarized
+end
+
+
+" Restore cursor position
+if has("autocmd")
+  autocmd BufReadPost *
+    \ if line("'\"") > 1 && line("'\"") <= line("$") |
+    \   exe "normal! g`\"" |
+    \ endif
+endif
+
+
+inoremap <c-f> <Right>
+inoremap <c-b> <Left>
+inoremap <c-l> <Esc>l
+inoremap jk <Esc>l
+
+autocmd vimenter * NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+

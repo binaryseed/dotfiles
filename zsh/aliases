@@ -13,7 +13,7 @@ alias grm='git rm'
 alias gl='git log --oneline --graph'
 
 alias cdp='cap deploy'
-alias gpd='git push;cap deploy'
+alias gpd='git push;mina deploy'
 alias gdm='git diff | mate'
 alias gd='git diff'
 
@@ -30,10 +30,13 @@ alias l='lsl'
 alias ..l='cd ..;lsl'
 alias ll='ls -ahlpG *'
 
+alias watch='less -S +F'
+
 #
 # servers
+alias nconf='sub /opt/nginx/conf/nginx.conf'
 alias restart='touch tmp/restart.txt'
-
+alias nrestart='sudo nginx -s quit; sudo nginx'
 
 #
 # shortcuts
@@ -42,3 +45,8 @@ alias rbv='rbenv'
 
 alias tarc='tar -czpvf'
 alias tarx='tar -xzpvf'
+
+alias sub='open -a "Sublime Text 2"'
+alias subl=sub
+
+alias dot='sub ~/.dotfiles/'
